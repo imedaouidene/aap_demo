@@ -1,0 +1,25 @@
+---
+controller_templates:
+  - name: "JT-START-LAUNCHER"
+    description: "This playbook will be used to launch other JTs"
+    project: "PJ-AAP-CAC"
+    playbook: "JT-START-LAUNCHER.yml"
+    inventory: "test-inventory"
+    credentials:
+      - "AAP Credentials"
+    ask_variables_on_launch: false
+    survey_enabled: true
+    survey_spec:
+      name: ""
+      description: ""
+      spec:
+        - question_name: Name of JT to launch
+          question_description:  "Name of the JT to launch ( ex. JT-TEST-EE-LEGACY-ANSIBLE-2-9 )"
+          required: True
+          type: text
+          variable: jt_to_launch
+          min: 1
+          max: 1024
+          default:  "Name of the JT to launch ( ex. JT-TEST-EE-LEGACY-ANSIBLE-2-9 )"
+          new_question: True
+    state: present
