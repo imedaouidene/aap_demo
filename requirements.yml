@@ -1,5 +1,5 @@
 collections:
   - name: infra.aap_configuration
   - name: infra.aap_configuration_extended
-  - name: ansible.controller
-    version: "4.6.26"
+  # - name: ansible.controller
+  #   version: "4.7.9"
