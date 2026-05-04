@@ -1,0 +1,23 @@
+---
+- name: Launch JT-main per domain
+  hosts: localhost
+  gather_facts: false
+
+  vars:
+    domain_credential_map:
+      domain1: cred-domain1
+      domain2: cred-domain2
+      domain3: cred-domain3
+      domain4: cred-domain4
+
+  tasks:
+    - name: Launch JT-main for each domain
+      ansible.controller.job_launch:
+        name: JT-main
+        limit: "{{ item.key }}"
+        credentials:
+          - "{{ item.value }}"
+        wait: false             # fire and forget, runs in parallel
+      loop: "{{ domain_credential_map | dict2items }}"
+      loop_control:
+        label: "{{ item.key }}"

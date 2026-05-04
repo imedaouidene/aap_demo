@@ -1,0 +1,20 @@
+# vars/job_templates.yml
+controller_templates:
+  - name: JT-main
+    job_type: run
+    organization: Default
+    inventory: inventory-100-servers
+    project: my-project
+    playbook: Playbooks/main-playbook.yaml
+    ask_limit_on_launch: true
+    ask_credential_on_launch: true
+    ask_variables_on_launch: false
+
+  - name: JT-launcher
+    job_type: run
+    organization: Default
+    inventory: inventory-100-servers
+    project: my-project
+    playbook: Playbooks/jt-launcher-playbook.yaml
+    credentials:
+      - CRED-AAP-ADMIN-CAC

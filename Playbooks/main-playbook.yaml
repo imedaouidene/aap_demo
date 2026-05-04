@@ -1,0 +1,14 @@
+---
+- name: Dummy playbook
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Run id command
+      ansible.builtin.command: id
+      register: id_output
+      changed_when: false
+
+    - name: Show result
+      ansible.builtin.debug:
+        var: id_output.stdout

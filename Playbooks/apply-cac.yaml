@@ -1,0 +1,16 @@
+---
+- name: Configure AAP - full CaC apply
+  hosts: localhost
+  gather_facts: false
+  connection: local
+
+  vars_files:
+    - vars/credentials.yml
+    - vars/inventory.yml
+    - vars/job_templates.yml
+
+  roles:
+    - infra.aap_configuration.inventories
+    - infra.aap_configuration.groups
+    - infra.aap_configuration.credentials
+    - infra.aap_configuration.job_templates
