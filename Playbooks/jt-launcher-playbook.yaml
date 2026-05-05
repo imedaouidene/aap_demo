@@ -13,7 +13,7 @@
   tasks:
     - name: Launch JT-main for each domain
       ansible.controller.job_launch:
-        name: JT-main
+        name: JT-MAIN-LOGIC
         limit: "{{ item.key }}"
         credentials:
           - "{{ item.value }}"

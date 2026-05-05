@@ -10,6 +10,7 @@ controller_templates:
     ask_variables_on_launch: false
 
   - name: JT-launcher
+    new_name: JT-LAUNCHER
     job_type: run
     organization: Default
     inventory: INV-LOCAL
