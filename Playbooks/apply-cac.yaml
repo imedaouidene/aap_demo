@@ -5,8 +5,8 @@
   connection: local
 
   vars_files:
-    - CaC/credentials.yaml
-    - CaC/job_templates.yml
+    - ../CaC/credentials.yaml
+    - ../CaC/job_templates.yml
   pre_tasks:
     - name: debug variables
       ansible.builtin.debug:
