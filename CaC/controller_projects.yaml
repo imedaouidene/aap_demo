@@ -1,0 +1,10 @@
+---
+controller_projects:
+  - name: PJ-AAP-CODE
+    organization: Default
+    scm_type: git
+    scm_url: https://github.com/imedaouidene/aap_demo.git
+    scm_branch: main
+    scm_clean: 'no'
+    scm_delete_on_update: 'no'
+    scm_update_on_launch: 'no' #MANUAL TRIGGER

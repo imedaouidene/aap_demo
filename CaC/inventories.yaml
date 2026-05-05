@@ -1,0 +1,63 @@
+controller_inventories:
+  - name: INV-LOCAL
+    organization: Default
+    description: created by Ansible Playbook - for demo purposes
+
+  - name: INV-ALL-HOSTS
+    organization: Default
+    description: created by Ansible Playbook - for demo purposes
+
+controller_hosts:
+  - name: localhost
+    inventory: INV-LOCAL
+    variables:
+      ansible_connection: local
+
+  - name: host1.domain1.com
+    inventory: INV-ALL-HOSTS
+    variables:
+      ansible_host: localhost
+      ansible_connection: local
+
+  - name: host2.domain1.com
+    inventory: INV-ALL-HOSTS
+    variables:
+      ansible_host: localhost
+      ansible_connection: local
+
+  - name: host3.domain1.com
+    inventory: INV-ALL-HOSTS
+    variables:
+      ansible_host: localhost
+      ansible_connection: local
+
+  - name: host4.domain1.com
+    inventory: INV-ALL-HOSTS
+    variables:
+      ansible_host: localhost
+      ansible_connection: local
+
+controller_groups:
+  - name: DOMAIN1
+    description: Group for DOMAIN1 hosts
+    inventory: INV-ALL-HOSTS
+    hosts:
+    - host1.domain1.com
+
+  - name: DOMAIN2
+    description: Group for DOMAIN2 hosts
+    inventory: INV-ALL-HOSTS
+    hosts:
+    - host2.domain1.com
+
+  - name: DOMAIN3
+    description: Group for DOMAIN3 hosts
+    inventory: INV-ALL-HOSTS
+    hosts:
+    - host3.domain1.com
+
+  - name: DOMAIN4
+    description: Group for DOMAIN4 hosts
+    inventory: INV-ALL-HOSTS
+    hosts:
+    - host4.domain1.com
