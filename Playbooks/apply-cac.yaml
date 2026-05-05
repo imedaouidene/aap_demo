@@ -13,7 +13,7 @@
   tasks:
     - name: Load all common configuration
       ansible.builtin.include_vars:
-        dir: "CaC/"
+        dir: "../CaC/"
         extensions:
           - 'yaml'
     - name: Run the main configuration role
