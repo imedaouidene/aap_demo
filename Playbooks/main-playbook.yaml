@@ -2,9 +2,7 @@
 - name: Dummy playbook
   hosts: all
   gather_facts: false
-
   tasks:
-
     - name: Show the user that was used to SSH
       ansible.builtin.debug:
         var: ansible_user
