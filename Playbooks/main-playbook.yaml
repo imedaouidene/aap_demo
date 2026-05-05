@@ -4,15 +4,7 @@
   gather_facts: false
 
   tasks:
-    - name: Run id command
-      ansible.builtin.command: id
-      register: id_output
-      changed_when: false
 
-    - name: Show result
-      ansible.builtin.debug:
-        var: id_output.stdout
-
-    - name: Show result
+    - name: Show the user that was used to SSH
       ansible.builtin.debug:
         var: ansible_user
