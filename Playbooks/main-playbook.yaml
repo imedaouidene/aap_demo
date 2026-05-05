@@ -6,3 +6,7 @@
     - name: Show the user that was used to SSH
       ansible.builtin.debug:
         var: ansible_user
+  post_tasks:
+    - name: show servers that failed
+      ansible.builtin.debug:
+        var: ansible_failed_hosts
