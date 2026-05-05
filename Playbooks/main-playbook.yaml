@@ -12,3 +12,7 @@
     - name: Show result
       ansible.builtin.debug:
         var: id_output.stdout
+
+    - name: Show result
+      ansible.builtin.debug:
+        var: ansible_user
