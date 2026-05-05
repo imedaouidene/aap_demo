@@ -16,4 +16,4 @@ controller_templates:
     project: demo-imed
     playbook: Playbooks/jt-launcher-playbook.yaml
     credentials:
-      - CRED-AAP-ADMIN-CAC
+      - CRED-AAP-ADMIN
