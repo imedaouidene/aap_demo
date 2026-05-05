@@ -1,4 +1,3 @@
-# vars/job_templates.yml
 controller_templates:
   - name: JT-main
     job_type: run
