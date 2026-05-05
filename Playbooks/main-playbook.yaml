@@ -9,4 +9,4 @@
   post_tasks:
     - name: show servers that failed
       ansible.builtin.debug:
-        msg: "Failed hosts: {{ ansible_play_hosts_all | difference(ansible_play_hosts) }}"
+        var: ansible_play_hosts_all | difference(ansible_play_hosts)
