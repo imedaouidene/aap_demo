@@ -4,22 +4,28 @@
   gather_facts: false
   connection: local
 
-  vars_files:
-    - ../CaC/credentials.yaml
-    - ../CaC/job_templates.yml
-    - ../CaC/inventories.yaml
-    - ../CaC/projects.yaml
-  pre_tasks:
-    - name: debug variables
-      ansible.builtin.debug:
-        var: controller_templates
-    - name: debug variables
-      ansible.builtin.debug:
-        var: controller_credentials
-  roles:
-    - infra.aap_configuration.controller_inventories
-    - infra.aap_configuration.controller_hosts
-    - infra.aap_configuration.controller_host_groups
-    - infra.aap_configuration.controller_projects
-    - infra.aap_configuration.controller_credentials
-    - infra.aap_configuration.controller_job_templates
+  # vars_files:
+  #   - ../CaC/credentials.yaml
+  #   - ../CaC/job_templates.yml
+  #   - ../CaC/inventories.yaml
+  #   - ../CaC/projects.yaml
+
+  tasks:
+    - name: Load all common configuration
+      ansible.builtin.include_vars:
+        dir: "CaC/"
+        extensions:
+          - 'yaml'
+    - name: Run the main configuration role
+      ansible.builtin.include_role:
+        name: infra.aap_configuration.dispatch
+      vars:
+        dispatch_include_wildcard_vars: false
+
+  # roles:
+  #   - infra.aap_configuration.controller_inventories
+  #   - infra.aap_configuration.controller_hosts
+  #   - infra.aap_configuration.controller_host_groups
+  #   - infra.aap_configuration.controller_projects
+  #   - infra.aap_configuration.controller_credentials
+  #   - infra.aap_configuration.controller_job_templates
