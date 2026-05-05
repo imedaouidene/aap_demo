@@ -1,9 +1,9 @@
 controller_templates:
-  - name: JT-main
+  - name: JT-MAIN-LOGIC
     job_type: run
     organization: Default
-    inventory: INV-DEMO
-    project: demo-imed
+    inventory: INV-ALL-HOSTS
+    project: PJ-AAP-CODE
     playbook: Playbooks/main-playbook.yaml
     ask_limit_on_launch: true
     ask_credential_on_launch: true
@@ -12,8 +12,8 @@ controller_templates:
   - name: JT-launcher
     job_type: run
     organization: Default
-    inventory: INV-DEMO
-    project: demo-imed
+    inventory: INV-LOCAL
+    project: PJ-AAP-CODE
     playbook: Playbooks/jt-launcher-playbook.yaml
     credentials:
       - CRED-AAP-ADMIN

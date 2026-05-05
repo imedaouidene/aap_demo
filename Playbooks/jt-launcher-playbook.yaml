@@ -5,10 +5,10 @@
 
   vars:
     domain_credential_map:
-      domain1: cred-domain1
-      domain2: cred-domain2
-      domain3: cred-domain3
-      domain4: cred-domain4
+      domain1: CRED-DOMAIN1
+      domain2: CRED-DOMAIN2
+      domain3: CRED-DOMAIN3
+      domain4: CRED-DOMAIN4
 
   tasks:
     - name: Launch JT-main for each domain

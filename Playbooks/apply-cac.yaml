@@ -7,6 +7,8 @@
   vars_files:
     - ../CaC/credentials.yaml
     - ../CaC/job_templates.yml
+    - ../CaC/inventories.yaml
+    - ../CaC/projects.yaml
   pre_tasks:
     - name: debug variables
       ansible.builtin.debug:
@@ -15,5 +17,9 @@
       ansible.builtin.debug:
         var: controller_credentials
   roles:
+    - infra.aap_configuration.controller_inventories
+    - infra.aap_configuration.controller_hosts
+    - infra.aap_configuration.controller_groups
+    - infra.aap_configuration.controller_projects
     - infra.aap_configuration.controller_credentials
     - infra.aap_configuration.controller_job_templates
