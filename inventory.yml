@@ -1,17 +1,4 @@
 all:
-  children:
-    france:
-      children:
-        web_servers:
-          hosts:
-            web01.example.com:
-            web02.example.com:
-        db_servers:
-          hosts:
-            db-prod-01.example.com:
-            db-prod-02.example.com:
-          vars:
-            db_port: 5432
   hosts:
     web01.example.com:
       loc: germany
