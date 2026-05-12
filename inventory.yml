@@ -12,3 +12,18 @@ all:
             db-prod-02.example.com:
           vars:
             db_port: 5432
+  hosts:
+    web01.example.com:
+      loc: germany
+      tier: web
+    web02.example.com:
+      loc: germany
+      tier: web
+    db-prod-01.example.com:
+      loc: germany
+      tier: db
+      env: prod
+    db-prod-02.example.com:
+      loc: germany
+      tier: db
+      env: prod
