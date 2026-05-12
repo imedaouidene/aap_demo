@@ -1,10 +1,10 @@
 all:
   hosts:
     web01.example.com:
-      loc: germany
+      loc: france
       tier: web
     web02.example.com:
-      loc: germany
+      loc: france
       tier: web
     db-prod-01.example.com:
       loc: germany
