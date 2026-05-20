@@ -1,16 +1,5002 @@
 all:
   hosts:
-    web01.example.com:
-      loc: france
-      tier: web
-    web02.example.com:
-      loc: france
-      tier: web
-    db-prod-01.example.com:
-      loc: germany
-      tier: db
-      env: prod
-    db-prod-02.example.com:
-      loc: germany
-      tier: db
-      env: prod
+    app-dev-au-001.example.com:
+      app: tomcat
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: australia
+    app-dev-ca-001.example.com:
+      app: tomcat
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: canada
+    app-dev-ca-002.example.com:
+      app: nodejs
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: canada
+    app-dev-de-001.example.com:
+      app: tomcat
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: germany
+    app-dev-de-002.example.com:
+      app: nodejs
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: germany
+    app-dev-de-003.example.com:
+      app: nodejs
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: germany
+    app-dev-es-001.example.com:
+      app: nodejs
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: spain
+    app-dev-es-002.example.com:
+      app: nodejs
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: spain
+    app-dev-es-003.example.com:
+      app: nodejs
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: spain
+    app-dev-es-004.example.com:
+      app: tomcat
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: spain
+    app-dev-fr-001.example.com:
+      app: tomcat
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: france
+    app-dev-fr-002.example.com:
+      app: nodejs
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: france
+    app-dev-it-001.example.com:
+      app: nodejs
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: italy
+    app-dev-it-002.example.com:
+      app: nodejs
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: italy
+    app-dev-nl-001.example.com:
+      app: tomcat
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: netherlands
+    app-dev-nl-002.example.com:
+      app: tomcat
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: netherlands
+    app-dev-nl-003.example.com:
+      app: tomcat
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: netherlands
+    app-dev-pl-001.example.com:
+      app: nodejs
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: poland
+    app-dev-uk-001.example.com:
+      app: nodejs
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: uk
+    app-dev-uk-002.example.com:
+      app: tomcat
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: uk
+    app-dev-uk-003.example.com:
+      app: tomcat
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: uk
+    app-dev-us-001.example.com:
+      app: nodejs
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: usa
+    app-dev-us-002.example.com:
+      app: tomcat
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: usa
+    app-dev-us-003.example.com:
+      app: nodejs
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: usa
+    app-dev-us-004.example.com:
+      app: nodejs
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: usa
+    app-prod-au-001.example.com:
+      app: tomcat
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: australia
+    app-prod-au-002.example.com:
+      app: tomcat
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: australia
+    app-prod-au-003.example.com:
+      app: nodejs
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: australia
+    app-prod-au-004.example.com:
+      app: tomcat
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: australia
+    app-prod-ca-001.example.com:
+      app: tomcat
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: canada
+    app-prod-ca-002.example.com:
+      app: nodejs
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: canada
+    app-prod-ca-003.example.com:
+      app: nodejs
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: canada
+    app-prod-ca-004.example.com:
+      app: tomcat
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: canada
+    app-prod-de-001.example.com:
+      app: tomcat
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: germany
+    app-prod-de-002.example.com:
+      app: tomcat
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: germany
+    app-prod-de-003.example.com:
+      app: nodejs
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: germany
+    app-prod-es-001.example.com:
+      app: nodejs
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: spain
+    app-prod-es-002.example.com:
+      app: tomcat
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: spain
+    app-prod-es-003.example.com:
+      app: tomcat
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: spain
+    app-prod-fr-001.example.com:
+      app: nodejs
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: france
+    app-prod-it-001.example.com:
+      app: nodejs
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: italy
+    app-prod-it-002.example.com:
+      app: nodejs
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: italy
+    app-prod-it-003.example.com:
+      app: nodejs
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: italy
+    app-prod-it-004.example.com:
+      app: nodejs
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: italy
+    app-prod-nl-001.example.com:
+      app: tomcat
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: netherlands
+    app-prod-pl-001.example.com:
+      app: tomcat
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: poland
+    app-prod-uk-001.example.com:
+      app: tomcat
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: uk
+    app-prod-uk-002.example.com:
+      app: nodejs
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: uk
+    app-prod-us-001.example.com:
+      app: tomcat
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: usa
+    app-prod-us-002.example.com:
+      app: tomcat
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: usa
+    app-prod-us-003.example.com:
+      app: nodejs
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: usa
+    app-qa-au-001.example.com:
+      app: tomcat
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: australia
+    app-qa-au-002.example.com:
+      app: nodejs
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: australia
+    app-qa-au-003.example.com:
+      app: tomcat
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: australia
+    app-qa-ca-001.example.com:
+      app: tomcat
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: canada
+    app-qa-ca-002.example.com:
+      app: nodejs
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: canada
+    app-qa-de-001.example.com:
+      app: tomcat
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: germany
+    app-qa-es-001.example.com:
+      app: tomcat
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: spain
+    app-qa-es-002.example.com:
+      app: tomcat
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: spain
+    app-qa-es-003.example.com:
+      app: tomcat
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: spain
+    app-qa-fr-001.example.com:
+      app: tomcat
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: france
+    app-qa-it-001.example.com:
+      app: tomcat
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: italy
+    app-qa-it-002.example.com:
+      app: nodejs
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: italy
+    app-qa-nl-001.example.com:
+      app: nodejs
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: netherlands
+    app-qa-pl-001.example.com:
+      app: tomcat
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: poland
+    app-qa-pl-002.example.com:
+      app: tomcat
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: poland
+    app-qa-uk-001.example.com:
+      app: nodejs
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: uk
+    app-qa-uk-002.example.com:
+      app: nodejs
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: uk
+    app-qa-uk-003.example.com:
+      app: nodejs
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: uk
+    app-qa-us-001.example.com:
+      app: nodejs
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: usa
+    app-qa-us-002.example.com:
+      app: nodejs
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: usa
+    app-qa-us-003.example.com:
+      app: nodejs
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: usa
+    app-qa-us-004.example.com:
+      app: tomcat
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: usa
+    app-qa-us-005.example.com:
+      app: nodejs
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: usa
+    app-qa-us-006.example.com:
+      app: tomcat
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: usa
+    app-qa-us-007.example.com:
+      app: nodejs
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: usa
+    app-staging-au-001.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: australia
+    app-staging-au-002.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: australia
+    app-staging-au-003.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: australia
+    app-staging-au-004.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: australia
+    app-staging-au-005.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: australia
+    app-staging-au-006.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: australia
+    app-staging-ca-001.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: canada
+    app-staging-ca-002.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: canada
+    app-staging-ca-003.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: canada
+    app-staging-ca-004.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: canada
+    app-staging-ca-005.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: canada
+    app-staging-ca-006.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: canada
+    app-staging-es-001.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: spain
+    app-staging-es-002.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: spain
+    app-staging-es-003.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: spain
+    app-staging-es-004.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: spain
+    app-staging-fr-001.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: france
+    app-staging-fr-002.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: france
+    app-staging-fr-003.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: france
+    app-staging-it-001.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: italy
+    app-staging-nl-001.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: netherlands
+    app-staging-nl-002.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: netherlands
+    app-staging-nl-003.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: netherlands
+    app-staging-pl-001.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: poland
+    app-staging-pl-002.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: poland
+    app-staging-pl-003.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: poland
+    app-staging-pl-004.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: poland
+    app-staging-pl-005.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: poland
+    app-staging-uk-001.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: uk
+    app-staging-uk-002.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: uk
+    app-staging-uk-003.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: uk
+    app-staging-uk-004.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: uk
+    app-staging-uk-005.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: uk
+    app-staging-uk-006.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: uk
+    app-staging-us-001.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: usa
+    app-staging-us-002.example.com:
+      app: tomcat
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: usa
+    app-staging-us-003.example.com:
+      app: nodejs
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: usa
+    app-uat-au-001.example.com:
+      app: tomcat
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: australia
+    app-uat-au-002.example.com:
+      app: tomcat
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: australia
+    app-uat-ca-001.example.com:
+      app: nodejs
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: canada
+    app-uat-ca-002.example.com:
+      app: tomcat
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: canada
+    app-uat-de-001.example.com:
+      app: nodejs
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: germany
+    app-uat-de-002.example.com:
+      app: nodejs
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: germany
+    app-uat-de-003.example.com:
+      app: tomcat
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: germany
+    app-uat-es-001.example.com:
+      app: nodejs
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: spain
+    app-uat-es-002.example.com:
+      app: nodejs
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: spain
+    app-uat-fr-001.example.com:
+      app: nodejs
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: france
+    app-uat-fr-002.example.com:
+      app: tomcat
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: france
+    app-uat-it-001.example.com:
+      app: nodejs
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: italy
+    app-uat-it-002.example.com:
+      app: tomcat
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: italy
+    app-uat-it-003.example.com:
+      app: nodejs
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: italy
+    app-uat-it-004.example.com:
+      app: tomcat
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: italy
+    app-uat-nl-001.example.com:
+      app: tomcat
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: netherlands
+    app-uat-nl-002.example.com:
+      app: tomcat
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: netherlands
+    app-uat-nl-003.example.com:
+      app: tomcat
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: netherlands
+    app-uat-nl-004.example.com:
+      app: tomcat
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: netherlands
+    app-uat-pl-001.example.com:
+      app: nodejs
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: poland
+    app-uat-pl-002.example.com:
+      app: tomcat
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: poland
+    app-uat-pl-003.example.com:
+      app: tomcat
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: poland
+    app-uat-uk-001.example.com:
+      app: tomcat
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: uk
+    app-uat-us-001.example.com:
+      app: nodejs
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: usa
+    backup-dev-au-001.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: australia
+    backup-dev-au-002.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: australia
+    backup-dev-au-003.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: australia
+    backup-dev-au-004.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: australia
+    backup-dev-au-005.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: australia
+    backup-dev-ca-001.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: canada
+    backup-dev-ca-002.example.com:
+      app: mysql
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: canada
+    backup-dev-de-001.example.com:
+      app: mysql
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: germany
+    backup-dev-de-002.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: germany
+    backup-dev-de-003.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: germany
+    backup-dev-es-001.example.com:
+      app: mysql
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: spain
+    backup-dev-it-001.example.com:
+      app: mysql
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: italy
+    backup-dev-it-002.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: italy
+    backup-dev-it-003.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: italy
+    backup-dev-it-004.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: italy
+    backup-dev-pl-001.example.com:
+      app: mysql
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: poland
+    backup-dev-pl-002.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: poland
+    backup-dev-uk-001.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: uk
+    backup-prod-au-001.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: australia
+    backup-prod-au-002.example.com:
+      app: mysql
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: australia
+    backup-prod-au-003.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: australia
+    backup-prod-ca-001.example.com:
+      app: mysql
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: canada
+    backup-prod-de-001.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: germany
+    backup-prod-es-001.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: spain
+    backup-prod-es-002.example.com:
+      app: mysql
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: spain
+    backup-prod-nl-001.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: netherlands
+    backup-prod-nl-002.example.com:
+      app: mysql
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: netherlands
+    backup-prod-nl-003.example.com:
+      app: mysql
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: netherlands
+    backup-prod-nl-004.example.com:
+      app: mysql
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: netherlands
+    backup-prod-nl-005.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: netherlands
+    backup-prod-pl-001.example.com:
+      app: mysql
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: poland
+    backup-prod-uk-001.example.com:
+      app: mysql
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: uk
+    backup-prod-us-001.example.com:
+      app: mysql
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: usa
+    backup-prod-us-002.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: usa
+    backup-prod-us-003.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: usa
+    backup-prod-us-004.example.com:
+      app: mysql
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: usa
+    backup-qa-ca-001.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: canada
+    backup-qa-ca-002.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: canada
+    backup-qa-de-001.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: germany
+    backup-qa-de-002.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: germany
+    backup-qa-de-003.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: germany
+    backup-qa-es-001.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: spain
+    backup-qa-es-002.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: spain
+    backup-qa-es-003.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: spain
+    backup-qa-es-004.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: spain
+    backup-qa-fr-001.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: france
+    backup-qa-fr-002.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: france
+    backup-qa-it-001.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: italy
+    backup-qa-it-002.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: italy
+    backup-qa-nl-001.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: netherlands
+    backup-qa-nl-002.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: netherlands
+    backup-qa-nl-003.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: netherlands
+    backup-qa-nl-004.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: netherlands
+    backup-qa-nl-005.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: netherlands
+    backup-qa-pl-001.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: poland
+    backup-qa-pl-002.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: poland
+    backup-qa-pl-003.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: poland
+    backup-qa-uk-001.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: uk
+    backup-staging-au-001.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: australia
+    backup-staging-au-002.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: australia
+    backup-staging-au-003.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: australia
+    backup-staging-ca-001.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: canada
+    backup-staging-ca-002.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: canada
+    backup-staging-de-001.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: germany
+    backup-staging-de-002.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: germany
+    backup-staging-de-003.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: germany
+    backup-staging-es-001.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: spain
+    backup-staging-es-002.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: spain
+    backup-staging-es-003.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: spain
+    backup-staging-es-004.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: spain
+    backup-staging-fr-001.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: france
+    backup-staging-fr-002.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: france
+    backup-staging-it-001.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: italy
+    backup-staging-it-002.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: italy
+    backup-staging-it-003.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: italy
+    backup-staging-it-004.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: italy
+    backup-staging-nl-001.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: netherlands
+    backup-staging-pl-001.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: poland
+    backup-staging-pl-002.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: poland
+    backup-staging-uk-001.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: uk
+    backup-staging-uk-002.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: uk
+    backup-staging-us-001.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: usa
+    backup-uat-au-001.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: australia
+    backup-uat-au-002.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: australia
+    backup-uat-au-003.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: australia
+    backup-uat-au-004.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: australia
+    backup-uat-ca-001.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: canada
+    backup-uat-ca-002.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: canada
+    backup-uat-de-001.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: germany
+    backup-uat-de-002.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: germany
+    backup-uat-es-001.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: spain
+    backup-uat-es-002.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: spain
+    backup-uat-fr-001.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: france
+    backup-uat-fr-002.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: france
+    backup-uat-fr-003.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: france
+    backup-uat-fr-004.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: france
+    backup-uat-it-001.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: italy
+    backup-uat-it-002.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: italy
+    backup-uat-nl-001.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: netherlands
+    backup-uat-uk-001.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: uk
+    backup-uat-uk-002.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: uk
+    backup-uat-uk-003.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: uk
+    backup-uat-uk-004.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: uk
+    backup-uat-us-001.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: usa
+    backup-uat-us-002.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: usa
+    backup-uat-us-003.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: usa
+    cache-dev-au-001.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: australia
+    cache-dev-au-002.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: australia
+    cache-dev-ca-001.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: canada
+    cache-dev-ca-002.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: canada
+    cache-dev-ca-003.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: canada
+    cache-dev-ca-004.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: canada
+    cache-dev-ca-005.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: canada
+    cache-dev-ca-006.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: canada
+    cache-dev-ca-007.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: canada
+    cache-dev-de-001.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: germany
+    cache-dev-de-002.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: germany
+    cache-dev-de-003.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: germany
+    cache-dev-es-001.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: spain
+    cache-dev-es-002.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: spain
+    cache-dev-es-003.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: spain
+    cache-dev-es-004.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: spain
+    cache-dev-es-005.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: spain
+    cache-dev-es-006.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: spain
+    cache-dev-es-007.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: spain
+    cache-dev-fr-001.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: france
+    cache-dev-fr-002.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: france
+    cache-dev-it-001.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: italy
+    cache-dev-it-002.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: italy
+    cache-dev-it-003.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: italy
+    cache-dev-it-004.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: italy
+    cache-dev-it-005.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: italy
+    cache-dev-nl-001.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: netherlands
+    cache-dev-nl-002.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: netherlands
+    cache-dev-pl-001.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: poland
+    cache-dev-pl-002.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: poland
+    cache-dev-pl-003.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: poland
+    cache-dev-uk-001.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: uk
+    cache-dev-uk-002.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: uk
+    cache-dev-uk-003.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: uk
+    cache-dev-us-001.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: usa
+    cache-dev-us-002.example.com:
+      app: redis
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: usa
+    cache-prod-au-001.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: australia
+    cache-prod-au-002.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: australia
+    cache-prod-ca-001.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: canada
+    cache-prod-ca-002.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: canada
+    cache-prod-ca-003.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: canada
+    cache-prod-ca-004.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: canada
+    cache-prod-de-001.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: germany
+    cache-prod-de-002.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: germany
+    cache-prod-de-003.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: germany
+    cache-prod-de-004.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: germany
+    cache-prod-fr-001.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: france
+    cache-prod-it-001.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: italy
+    cache-prod-it-002.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: italy
+    cache-prod-it-003.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: italy
+    cache-prod-it-004.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: italy
+    cache-prod-it-005.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: italy
+    cache-prod-it-006.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: italy
+    cache-prod-it-007.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: italy
+    cache-prod-nl-001.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: netherlands
+    cache-prod-nl-002.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: netherlands
+    cache-prod-nl-003.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: netherlands
+    cache-prod-nl-004.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: netherlands
+    cache-prod-pl-001.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: poland
+    cache-prod-pl-002.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: poland
+    cache-prod-pl-003.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: poland
+    cache-prod-pl-004.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: poland
+    cache-prod-uk-001.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: uk
+    cache-prod-uk-002.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: uk
+    cache-prod-uk-003.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: uk
+    cache-prod-uk-004.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: uk
+    cache-prod-uk-005.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: uk
+    cache-prod-uk-006.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: uk
+    cache-prod-us-001.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: usa
+    cache-prod-us-002.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: usa
+    cache-prod-us-003.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: usa
+    cache-prod-us-004.example.com:
+      app: redis
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: usa
+    cache-qa-au-001.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: australia
+    cache-qa-ca-001.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: canada
+    cache-qa-de-001.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: germany
+    cache-qa-de-002.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: germany
+    cache-qa-de-003.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: germany
+    cache-qa-es-001.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: spain
+    cache-qa-fr-001.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: france
+    cache-qa-it-001.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: italy
+    cache-qa-nl-001.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: netherlands
+    cache-qa-nl-002.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: netherlands
+    cache-qa-uk-001.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: uk
+    cache-qa-uk-002.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: uk
+    cache-qa-uk-003.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: uk
+    cache-qa-us-001.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: usa
+    cache-qa-us-002.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: usa
+    cache-qa-us-003.example.com:
+      app: redis
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: usa
+    cache-staging-au-001.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: australia
+    cache-staging-au-002.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: australia
+    cache-staging-au-003.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: australia
+    cache-staging-ca-001.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: canada
+    cache-staging-de-001.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: germany
+    cache-staging-de-002.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: germany
+    cache-staging-de-003.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: germany
+    cache-staging-de-004.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: germany
+    cache-staging-fr-001.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: france
+    cache-staging-it-001.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: italy
+    cache-staging-it-002.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: italy
+    cache-staging-it-003.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: italy
+    cache-staging-it-004.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: italy
+    cache-staging-nl-001.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: netherlands
+    cache-staging-nl-002.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: netherlands
+    cache-staging-nl-003.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: netherlands
+    cache-staging-pl-001.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: poland
+    cache-staging-uk-001.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: uk
+    cache-staging-uk-002.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: uk
+    cache-staging-us-001.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: usa
+    cache-staging-us-002.example.com:
+      app: redis
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: usa
+    cache-uat-au-001.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: australia
+    cache-uat-au-002.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: australia
+    cache-uat-au-003.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: australia
+    cache-uat-au-004.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: australia
+    cache-uat-de-001.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: germany
+    cache-uat-de-002.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: germany
+    cache-uat-de-003.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: germany
+    cache-uat-es-001.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: spain
+    cache-uat-fr-001.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: france
+    cache-uat-fr-002.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: france
+    cache-uat-it-001.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: italy
+    cache-uat-nl-001.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: netherlands
+    cache-uat-pl-001.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: poland
+    cache-uat-uk-001.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: uk
+    cache-uat-uk-002.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: uk
+    cache-uat-us-001.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: usa
+    cache-uat-us-002.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: usa
+    cache-uat-us-003.example.com:
+      app: redis
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: usa
+    db-dev-au-001.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: australia
+    db-dev-au-002.example.com:
+      app: mysql
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: australia
+    db-dev-ca-001.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: canada
+    db-dev-de-001.example.com:
+      app: mongodb
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: germany
+    db-dev-de-002.example.com:
+      app: mysql
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: germany
+    db-dev-de-003.example.com:
+      app: mongodb
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: germany
+    db-dev-es-001.example.com:
+      app: mongodb
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: spain
+    db-dev-es-002.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: spain
+    db-dev-es-003.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: spain
+    db-dev-fr-001.example.com:
+      app: mongodb
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: france
+    db-dev-fr-002.example.com:
+      app: mysql
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: france
+    db-dev-fr-003.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: france
+    db-dev-fr-004.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: france
+    db-dev-it-001.example.com:
+      app: mongodb
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: italy
+    db-dev-nl-001.example.com:
+      app: mongodb
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: netherlands
+    db-dev-nl-002.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: netherlands
+    db-dev-pl-001.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: poland
+    db-dev-pl-002.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: poland
+    db-dev-uk-001.example.com:
+      app: mongodb
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: uk
+    db-dev-uk-002.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: uk
+    db-dev-uk-003.example.com:
+      app: mongodb
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: uk
+    db-dev-uk-004.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: uk
+    db-dev-us-001.example.com:
+      app: mongodb
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: usa
+    db-dev-us-002.example.com:
+      app: postgres
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: usa
+    db-dev-us-003.example.com:
+      app: mongodb
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: usa
+    db-dev-us-004.example.com:
+      app: mysql
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: usa
+    db-dev-us-005.example.com:
+      app: mongodb
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: usa
+    db-prod-au-001.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: australia
+    db-prod-au-002.example.com:
+      app: mongodb
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: australia
+    db-prod-ca-001.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: canada
+    db-prod-ca-002.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: canada
+    db-prod-ca-003.example.com:
+      app: mysql
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: canada
+    db-prod-de-001.example.com:
+      app: mysql
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: germany
+    db-prod-de-002.example.com:
+      app: mongodb
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: germany
+    db-prod-de-003.example.com:
+      app: mongodb
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: germany
+    db-prod-es-001.example.com:
+      app: mongodb
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: spain
+    db-prod-es-002.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: spain
+    db-prod-fr-001.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: france
+    db-prod-fr-002.example.com:
+      app: mongodb
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: france
+    db-prod-it-001.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: italy
+    db-prod-it-002.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: italy
+    db-prod-nl-001.example.com:
+      app: mongodb
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: netherlands
+    db-prod-nl-002.example.com:
+      app: mysql
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: netherlands
+    db-prod-nl-003.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: netherlands
+    db-prod-nl-004.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: netherlands
+    db-prod-pl-001.example.com:
+      app: mysql
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: poland
+    db-prod-pl-002.example.com:
+      app: mongodb
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: poland
+    db-prod-pl-003.example.com:
+      app: mysql
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: poland
+    db-prod-pl-004.example.com:
+      app: mongodb
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: poland
+    db-prod-us-001.example.com:
+      app: postgres
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: usa
+    db-prod-us-002.example.com:
+      app: mongodb
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: usa
+    db-prod-us-003.example.com:
+      app: mongodb
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: usa
+    db-qa-au-001.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: australia
+    db-qa-au-002.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: australia
+    db-qa-ca-001.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: canada
+    db-qa-ca-002.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: canada
+    db-qa-de-001.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: germany
+    db-qa-de-002.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: germany
+    db-qa-de-003.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: germany
+    db-qa-de-004.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: germany
+    db-qa-es-001.example.com:
+      app: mongodb
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: spain
+    db-qa-fr-001.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: france
+    db-qa-it-001.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: italy
+    db-qa-it-002.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: italy
+    db-qa-it-003.example.com:
+      app: mongodb
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: italy
+    db-qa-it-004.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: italy
+    db-qa-it-005.example.com:
+      app: mongodb
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: italy
+    db-qa-it-006.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: italy
+    db-qa-nl-001.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: netherlands
+    db-qa-nl-002.example.com:
+      app: postgres
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: netherlands
+    db-qa-nl-003.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: netherlands
+    db-qa-pl-001.example.com:
+      app: mongodb
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: poland
+    db-qa-uk-001.example.com:
+      app: mongodb
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: uk
+    db-qa-uk-002.example.com:
+      app: mongodb
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: uk
+    db-qa-us-001.example.com:
+      app: mysql
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: usa
+    db-staging-au-001.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: australia
+    db-staging-au-002.example.com:
+      app: mongodb
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: australia
+    db-staging-ca-001.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: canada
+    db-staging-de-001.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: germany
+    db-staging-es-001.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: spain
+    db-staging-es-002.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: spain
+    db-staging-es-003.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: spain
+    db-staging-es-004.example.com:
+      app: mongodb
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: spain
+    db-staging-es-005.example.com:
+      app: mongodb
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: spain
+    db-staging-es-006.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: spain
+    db-staging-fr-001.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: france
+    db-staging-fr-002.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: france
+    db-staging-fr-003.example.com:
+      app: mongodb
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: france
+    db-staging-it-001.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: italy
+    db-staging-it-002.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: italy
+    db-staging-uk-001.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: uk
+    db-staging-uk-002.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: uk
+    db-staging-uk-003.example.com:
+      app: mysql
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: uk
+    db-staging-us-001.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: usa
+    db-staging-us-002.example.com:
+      app: postgres
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: usa
+    db-uat-au-001.example.com:
+      app: mongodb
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: australia
+    db-uat-au-002.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: australia
+    db-uat-au-003.example.com:
+      app: mongodb
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: australia
+    db-uat-ca-001.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: canada
+    db-uat-ca-002.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: canada
+    db-uat-ca-003.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: canada
+    db-uat-ca-004.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: canada
+    db-uat-es-001.example.com:
+      app: mysql
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: spain
+    db-uat-it-001.example.com:
+      app: mongodb
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: italy
+    db-uat-nl-001.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: netherlands
+    db-uat-pl-001.example.com:
+      app: mongodb
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: poland
+    db-uat-pl-002.example.com:
+      app: mongodb
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: poland
+    db-uat-pl-003.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: poland
+    db-uat-pl-004.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: poland
+    db-uat-pl-005.example.com:
+      app: mongodb
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: poland
+    db-uat-us-001.example.com:
+      app: mongodb
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: usa
+    db-uat-us-002.example.com:
+      app: postgres
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: usa
+    db-uat-us-003.example.com:
+      app: mongodb
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: usa
+    lb-dev-au-001.example.com:
+      app: nginx
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: australia
+    lb-dev-au-002.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: australia
+    lb-dev-au-003.example.com:
+      app: nginx
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: australia
+    lb-dev-ca-001.example.com:
+      app: nginx
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: canada
+    lb-dev-es-001.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: spain
+    lb-dev-it-001.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: italy
+    lb-dev-it-002.example.com:
+      app: nginx
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: italy
+    lb-dev-it-003.example.com:
+      app: nginx
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: italy
+    lb-dev-it-004.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: italy
+    lb-dev-nl-001.example.com:
+      app: nginx
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: netherlands
+    lb-dev-nl-002.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: netherlands
+    lb-dev-pl-001.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: poland
+    lb-dev-pl-002.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: poland
+    lb-dev-pl-003.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: poland
+    lb-dev-pl-004.example.com:
+      app: nginx
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: poland
+    lb-dev-uk-001.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: uk
+    lb-dev-uk-002.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: uk
+    lb-dev-uk-003.example.com:
+      app: nginx
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: uk
+    lb-dev-us-001.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: usa
+    lb-prod-au-001.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: australia
+    lb-prod-au-002.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: australia
+    lb-prod-au-003.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: australia
+    lb-prod-au-004.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: australia
+    lb-prod-au-005.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: australia
+    lb-prod-ca-001.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: canada
+    lb-prod-ca-002.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: canada
+    lb-prod-ca-003.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: canada
+    lb-prod-ca-004.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: canada
+    lb-prod-ca-005.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: canada
+    lb-prod-de-001.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: germany
+    lb-prod-es-001.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: spain
+    lb-prod-fr-001.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: france
+    lb-prod-fr-002.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: france
+    lb-prod-fr-003.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: france
+    lb-prod-fr-004.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: france
+    lb-prod-it-001.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: italy
+    lb-prod-it-002.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: italy
+    lb-prod-nl-001.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: netherlands
+    lb-prod-pl-001.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: poland
+    lb-prod-pl-002.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: poland
+    lb-prod-uk-001.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: uk
+    lb-prod-uk-002.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: uk
+    lb-prod-uk-003.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: uk
+    lb-prod-us-001.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: usa
+    lb-prod-us-002.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: usa
+    lb-qa-au-001.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: australia
+    lb-qa-au-002.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: australia
+    lb-qa-au-003.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: australia
+    lb-qa-ca-001.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: canada
+    lb-qa-ca-002.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: canada
+    lb-qa-ca-003.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: canada
+    lb-qa-de-001.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: germany
+    lb-qa-de-002.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: germany
+    lb-qa-es-001.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: spain
+    lb-qa-es-002.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: spain
+    lb-qa-fr-001.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: france
+    lb-qa-fr-002.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: france
+    lb-qa-fr-003.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: france
+    lb-qa-fr-004.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: france
+    lb-qa-fr-005.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: france
+    lb-qa-it-001.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: italy
+    lb-qa-it-002.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: italy
+    lb-qa-nl-001.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: netherlands
+    lb-qa-nl-002.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: netherlands
+    lb-qa-nl-003.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: netherlands
+    lb-qa-nl-004.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: netherlands
+    lb-qa-pl-001.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: poland
+    lb-qa-pl-002.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: poland
+    lb-qa-pl-003.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: poland
+    lb-qa-pl-004.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: poland
+    lb-qa-pl-005.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: poland
+    lb-qa-uk-001.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: uk
+    lb-qa-us-001.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: usa
+    lb-qa-us-002.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: usa
+    lb-qa-us-003.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: usa
+    lb-qa-us-004.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: usa
+    lb-qa-us-005.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: usa
+    lb-staging-au-001.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: australia
+    lb-staging-au-002.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: australia
+    lb-staging-au-003.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: australia
+    lb-staging-de-001.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: germany
+    lb-staging-de-002.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: germany
+    lb-staging-es-001.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: spain
+    lb-staging-es-002.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: spain
+    lb-staging-es-003.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: spain
+    lb-staging-es-004.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: spain
+    lb-staging-es-005.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: spain
+    lb-staging-fr-001.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: france
+    lb-staging-fr-002.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: france
+    lb-staging-fr-003.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: france
+    lb-staging-fr-004.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: france
+    lb-staging-it-001.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: italy
+    lb-staging-it-002.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: italy
+    lb-staging-it-003.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: italy
+    lb-staging-nl-001.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: netherlands
+    lb-staging-nl-002.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: netherlands
+    lb-staging-nl-003.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: netherlands
+    lb-staging-nl-004.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: netherlands
+    lb-staging-nl-005.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: netherlands
+    lb-staging-pl-001.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: poland
+    lb-staging-pl-002.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: poland
+    lb-staging-pl-003.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: poland
+    lb-staging-uk-001.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: uk
+    lb-staging-uk-002.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: uk
+    lb-staging-uk-003.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: uk
+    lb-staging-uk-004.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: uk
+    lb-staging-uk-005.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: uk
+    lb-staging-us-001.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: usa
+    lb-staging-us-002.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: usa
+    lb-staging-us-003.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: usa
+    lb-uat-au-001.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: australia
+    lb-uat-au-002.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: australia
+    lb-uat-au-003.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: australia
+    lb-uat-de-001.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: germany
+    lb-uat-de-002.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: germany
+    lb-uat-de-003.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: germany
+    lb-uat-es-001.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: spain
+    lb-uat-fr-001.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: france
+    lb-uat-fr-002.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: france
+    lb-uat-it-001.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: italy
+    lb-uat-it-002.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: italy
+    lb-uat-it-003.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: italy
+    lb-uat-it-004.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: italy
+    lb-uat-nl-001.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: netherlands
+    lb-uat-pl-001.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: poland
+    lb-uat-pl-002.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: poland
+    lb-uat-pl-003.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: poland
+    lb-uat-uk-001.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: uk
+    lb-uat-uk-002.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: uk
+    lb-uat-us-001.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: usa
+    lb-uat-us-002.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: usa
+    lb-uat-us-003.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: usa
+    lb-uat-us-004.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: usa
+    lb-uat-us-005.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: usa
+    monitor-dev-au-001.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: australia
+    monitor-dev-au-002.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: australia
+    monitor-dev-au-003.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: australia
+    monitor-dev-au-004.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: australia
+    monitor-dev-ca-001.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: canada
+    monitor-dev-es-001.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: spain
+    monitor-dev-es-002.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: spain
+    monitor-dev-fr-001.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: france
+    monitor-dev-fr-002.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: france
+    monitor-dev-fr-003.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: france
+    monitor-dev-nl-001.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: netherlands
+    monitor-dev-nl-002.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: netherlands
+    monitor-dev-nl-003.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: netherlands
+    monitor-dev-nl-004.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: netherlands
+    monitor-dev-pl-001.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: poland
+    monitor-dev-pl-002.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: poland
+    monitor-dev-uk-001.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: uk
+    monitor-dev-uk-002.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: uk
+    monitor-dev-uk-003.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: uk
+    monitor-dev-uk-004.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: uk
+    monitor-dev-uk-005.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: uk
+    monitor-dev-us-001.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: usa
+    monitor-dev-us-002.example.com:
+      app: elasticsearch
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: usa
+    monitor-prod-au-001.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: australia
+    monitor-prod-au-002.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: australia
+    monitor-prod-au-003.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: australia
+    monitor-prod-ca-001.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: canada
+    monitor-prod-de-001.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: germany
+    monitor-prod-de-002.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: germany
+    monitor-prod-de-003.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: germany
+    monitor-prod-es-001.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: spain
+    monitor-prod-es-002.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: spain
+    monitor-prod-es-003.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: spain
+    monitor-prod-es-004.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: spain
+    monitor-prod-fr-001.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: france
+    monitor-prod-fr-002.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: france
+    monitor-prod-fr-003.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: france
+    monitor-prod-it-001.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: italy
+    monitor-prod-it-002.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: italy
+    monitor-prod-nl-001.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: netherlands
+    monitor-prod-nl-002.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: netherlands
+    monitor-prod-pl-001.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: poland
+    monitor-prod-pl-002.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: poland
+    monitor-prod-uk-001.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: uk
+    monitor-prod-uk-002.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: uk
+    monitor-prod-uk-003.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: uk
+    monitor-prod-uk-004.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: uk
+    monitor-prod-us-001.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: usa
+    monitor-prod-us-002.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: usa
+    monitor-prod-us-003.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: usa
+    monitor-prod-us-004.example.com:
+      app: elasticsearch
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: usa
+    monitor-qa-au-001.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: australia
+    monitor-qa-au-002.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: australia
+    monitor-qa-ca-001.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: canada
+    monitor-qa-ca-002.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: canada
+    monitor-qa-de-001.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: germany
+    monitor-qa-de-002.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: germany
+    monitor-qa-es-001.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: spain
+    monitor-qa-es-002.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: spain
+    monitor-qa-es-003.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: spain
+    monitor-qa-es-004.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: spain
+    monitor-qa-es-005.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: spain
+    monitor-qa-fr-001.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: france
+    monitor-qa-fr-002.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: france
+    monitor-qa-fr-003.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: france
+    monitor-qa-fr-004.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: france
+    monitor-qa-it-001.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: italy
+    monitor-qa-it-002.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: italy
+    monitor-qa-it-003.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: italy
+    monitor-qa-nl-001.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: netherlands
+    monitor-qa-nl-002.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: netherlands
+    monitor-qa-nl-003.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: netherlands
+    monitor-qa-nl-004.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: netherlands
+    monitor-qa-nl-005.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: netherlands
+    monitor-qa-nl-006.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: netherlands
+    monitor-qa-pl-001.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: poland
+    monitor-qa-pl-002.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: poland
+    monitor-qa-pl-003.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: poland
+    monitor-qa-uk-001.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: uk
+    monitor-qa-uk-002.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: uk
+    monitor-qa-uk-003.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: uk
+    monitor-qa-uk-004.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: uk
+    monitor-qa-uk-005.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: uk
+    monitor-qa-uk-006.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: uk
+    monitor-qa-us-001.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: usa
+    monitor-qa-us-002.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: usa
+    monitor-qa-us-003.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: usa
+    monitor-qa-us-004.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: usa
+    monitor-qa-us-005.example.com:
+      app: elasticsearch
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: usa
+    monitor-staging-au-001.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: australia
+    monitor-staging-au-002.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: australia
+    monitor-staging-au-003.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: australia
+    monitor-staging-ca-001.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: canada
+    monitor-staging-ca-002.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: canada
+    monitor-staging-ca-003.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: canada
+    monitor-staging-ca-004.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: canada
+    monitor-staging-de-001.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: germany
+    monitor-staging-de-002.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: germany
+    monitor-staging-es-001.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: spain
+    monitor-staging-es-002.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: spain
+    monitor-staging-es-003.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: spain
+    monitor-staging-fr-001.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: france
+    monitor-staging-fr-002.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: france
+    monitor-staging-fr-003.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: france
+    monitor-staging-fr-004.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: france
+    monitor-staging-fr-005.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: france
+    monitor-staging-fr-006.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: france
+    monitor-staging-it-001.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: italy
+    monitor-staging-it-002.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: italy
+    monitor-staging-it-003.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: italy
+    monitor-staging-it-004.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: italy
+    monitor-staging-it-005.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: italy
+    monitor-staging-it-006.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: italy
+    monitor-staging-it-007.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: italy
+    monitor-staging-nl-001.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: netherlands
+    monitor-staging-uk-001.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: uk
+    monitor-staging-us-001.example.com:
+      app: elasticsearch
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: usa
+    monitor-uat-ca-001.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: canada
+    monitor-uat-ca-002.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: canada
+    monitor-uat-de-001.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: germany
+    monitor-uat-de-002.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: germany
+    monitor-uat-de-003.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: germany
+    monitor-uat-de-004.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: germany
+    monitor-uat-es-001.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: spain
+    monitor-uat-fr-001.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: france
+    monitor-uat-fr-002.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: france
+    monitor-uat-fr-003.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: france
+    monitor-uat-fr-004.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: france
+    monitor-uat-it-001.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: italy
+    monitor-uat-it-002.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: italy
+    monitor-uat-pl-001.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: poland
+    monitor-uat-pl-002.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: poland
+    monitor-uat-uk-001.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: uk
+    monitor-uat-us-001.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: usa
+    monitor-uat-us-002.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: usa
+    monitor-uat-us-003.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: usa
+    monitor-uat-us-004.example.com:
+      app: elasticsearch
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: usa
+    mq-dev-au-001.example.com:
+      app: kafka
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: australia
+    mq-dev-au-002.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: australia
+    mq-dev-ca-001.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: canada
+    mq-dev-ca-002.example.com:
+      app: kafka
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: canada
+    mq-dev-de-001.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: germany
+    mq-dev-de-002.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: germany
+    mq-dev-de-003.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: germany
+    mq-dev-de-004.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: germany
+    mq-dev-de-005.example.com:
+      app: kafka
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: germany
+    mq-dev-de-006.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: germany
+    mq-dev-es-001.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: spain
+    mq-dev-es-002.example.com:
+      app: kafka
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: spain
+    mq-dev-es-003.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: spain
+    mq-dev-fr-001.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: france
+    mq-dev-fr-002.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: france
+    mq-dev-fr-003.example.com:
+      app: kafka
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: france
+    mq-dev-nl-001.example.com:
+      app: kafka
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: netherlands
+    mq-dev-pl-001.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: poland
+    mq-dev-pl-002.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: poland
+    mq-dev-uk-001.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: uk
+    mq-dev-us-001.example.com:
+      app: kafka
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: usa
+    mq-dev-us-002.example.com:
+      app: kafka
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: usa
+    mq-dev-us-003.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: usa
+    mq-dev-us-004.example.com:
+      app: kafka
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: usa
+    mq-dev-us-005.example.com:
+      app: rabbitmq
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: usa
+    mq-prod-au-001.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: australia
+    mq-prod-au-002.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: australia
+    mq-prod-au-003.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: australia
+    mq-prod-au-004.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: australia
+    mq-prod-au-005.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: australia
+    mq-prod-ca-001.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: canada
+    mq-prod-ca-002.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: canada
+    mq-prod-de-001.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: germany
+    mq-prod-de-002.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: germany
+    mq-prod-de-003.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: germany
+    mq-prod-de-004.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: germany
+    mq-prod-es-001.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: spain
+    mq-prod-es-002.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: spain
+    mq-prod-es-003.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: spain
+    mq-prod-es-004.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: spain
+    mq-prod-fr-001.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: france
+    mq-prod-fr-002.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: france
+    mq-prod-fr-003.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: france
+    mq-prod-fr-004.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: france
+    mq-prod-it-001.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: italy
+    mq-prod-it-002.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: italy
+    mq-prod-it-003.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: italy
+    mq-prod-it-004.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: italy
+    mq-prod-it-005.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: italy
+    mq-prod-nl-001.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: netherlands
+    mq-prod-nl-002.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: netherlands
+    mq-prod-nl-003.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: netherlands
+    mq-prod-nl-004.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: netherlands
+    mq-prod-pl-001.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: poland
+    mq-prod-pl-002.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: poland
+    mq-prod-uk-001.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: uk
+    mq-prod-uk-002.example.com:
+      app: kafka
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: uk
+    mq-prod-uk-003.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: uk
+    mq-prod-uk-004.example.com:
+      app: rabbitmq
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: uk
+    mq-qa-ca-001.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: canada
+    mq-qa-ca-002.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: canada
+    mq-qa-ca-003.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: canada
+    mq-qa-de-001.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: germany
+    mq-qa-es-001.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: spain
+    mq-qa-fr-001.example.com:
+      app: kafka
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: france
+    mq-qa-it-001.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: italy
+    mq-qa-it-002.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: italy
+    mq-qa-it-003.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: italy
+    mq-qa-it-004.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: italy
+    mq-qa-nl-001.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: netherlands
+    mq-qa-pl-001.example.com:
+      app: kafka
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: poland
+    mq-qa-uk-001.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: uk
+    mq-qa-uk-002.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: uk
+    mq-qa-uk-003.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: uk
+    mq-qa-us-001.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: usa
+    mq-qa-us-002.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: usa
+    mq-qa-us-003.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: usa
+    mq-qa-us-004.example.com:
+      app: rabbitmq
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: usa
+    mq-qa-us-005.example.com:
+      app: kafka
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: usa
+    mq-staging-au-001.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: australia
+    mq-staging-ca-001.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: canada
+    mq-staging-ca-002.example.com:
+      app: kafka
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: canada
+    mq-staging-ca-003.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: canada
+    mq-staging-ca-004.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: canada
+    mq-staging-de-001.example.com:
+      app: kafka
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: germany
+    mq-staging-de-002.example.com:
+      app: kafka
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: germany
+    mq-staging-de-003.example.com:
+      app: kafka
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: germany
+    mq-staging-de-004.example.com:
+      app: kafka
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: germany
+    mq-staging-de-005.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: germany
+    mq-staging-de-006.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: germany
+    mq-staging-de-007.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: germany
+    mq-staging-de-008.example.com:
+      app: kafka
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: germany
+    mq-staging-es-001.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: spain
+    mq-staging-fr-001.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: france
+    mq-staging-fr-002.example.com:
+      app: kafka
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: france
+    mq-staging-it-001.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: italy
+    mq-staging-it-002.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: italy
+    mq-staging-it-003.example.com:
+      app: kafka
+      vm_env: staging
+      vm_os: rocky9
+      vm_support_country: italy
+    mq-staging-nl-001.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: netherlands
+    mq-staging-nl-002.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: netherlands
+    mq-staging-nl-003.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: netherlands
+    mq-staging-nl-004.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: netherlands
+    mq-staging-nl-005.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: netherlands
+    mq-staging-pl-001.example.com:
+      app: kafka
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: poland
+    mq-staging-pl-002.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: poland
+    mq-staging-uk-001.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: uk
+    mq-staging-uk-002.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: uk
+    mq-staging-uk-003.example.com:
+      app: kafka
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: uk
+    mq-staging-us-001.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: usa
+    mq-staging-us-002.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: usa
+    mq-staging-us-003.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: usa
+    mq-staging-us-004.example.com:
+      app: rabbitmq
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: usa
+    mq-uat-au-001.example.com:
+      app: rabbitmq
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: australia
+    mq-uat-de-001.example.com:
+      app: rabbitmq
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: germany
+    mq-uat-de-002.example.com:
+      app: kafka
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: germany
+    mq-uat-de-003.example.com:
+      app: rabbitmq
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: germany
+    mq-uat-es-001.example.com:
+      app: rabbitmq
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: spain
+    mq-uat-es-002.example.com:
+      app: kafka
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: spain
+    mq-uat-es-003.example.com:
+      app: kafka
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: spain
+    mq-uat-fr-001.example.com:
+      app: rabbitmq
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: france
+    mq-uat-fr-002.example.com:
+      app: kafka
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: france
+    mq-uat-fr-003.example.com:
+      app: rabbitmq
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: france
+    mq-uat-fr-004.example.com:
+      app: rabbitmq
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: france
+    mq-uat-fr-005.example.com:
+      app: rabbitmq
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: france
+    mq-uat-it-001.example.com:
+      app: rabbitmq
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: italy
+    mq-uat-nl-001.example.com:
+      app: kafka
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: netherlands
+    mq-uat-nl-002.example.com:
+      app: rabbitmq
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: netherlands
+    mq-uat-pl-001.example.com:
+      app: rabbitmq
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: poland
+    mq-uat-pl-002.example.com:
+      app: rabbitmq
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: poland
+    mq-uat-uk-001.example.com:
+      app: kafka
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: uk
+    mq-uat-uk-002.example.com:
+      app: kafka
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: uk
+    mq-uat-us-001.example.com:
+      app: rabbitmq
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: usa
+    web-dev-au-001.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: australia
+    web-dev-au-002.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: australia
+    web-dev-ca-001.example.com:
+      app: apache
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: canada
+    web-dev-ca-002.example.com:
+      app: nginx
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: canada
+    web-dev-ca-003.example.com:
+      app: nginx
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: canada
+    web-dev-ca-004.example.com:
+      app: apache
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: canada
+    web-dev-ca-005.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: canada
+    web-dev-ca-006.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: canada
+    web-dev-de-001.example.com:
+      app: nginx
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: germany
+    web-dev-fr-001.example.com:
+      app: apache
+      vm_env: dev
+      vm_os: ubuntu20
+      vm_support_country: france
+    web-dev-fr-002.example.com:
+      app: apache
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: france
+    web-dev-fr-003.example.com:
+      app: apache
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: france
+    web-dev-fr-004.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: debian12
+      vm_support_country: france
+    web-dev-fr-005.example.com:
+      app: nginx
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: france
+    web-dev-it-001.example.com:
+      app: apache
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: italy
+    web-dev-nl-001.example.com:
+      app: apache
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: netherlands
+    web-dev-nl-002.example.com:
+      app: apache
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: netherlands
+    web-dev-nl-003.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: netherlands
+    web-dev-pl-001.example.com:
+      app: apache
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: poland
+    web-dev-pl-002.example.com:
+      app: apache
+      vm_env: dev
+      vm_os: ubuntu22
+      vm_support_country: poland
+    web-dev-uk-001.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: uk
+    web-dev-uk-002.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: rocky9
+      vm_support_country: uk
+    web-dev-us-001.example.com:
+      app: apache
+      vm_env: dev
+      vm_os: rhel8
+      vm_support_country: usa
+    web-dev-us-002.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: rhel9
+      vm_support_country: usa
+    web-dev-us-003.example.com:
+      app: apache
+      vm_env: dev
+      vm_os: debian11
+      vm_support_country: usa
+    web-dev-us-004.example.com:
+      app: haproxy
+      vm_env: dev
+      vm_os: centos7
+      vm_support_country: usa
+    web-prod-ca-001.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: canada
+    web-prod-ca-002.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: canada
+    web-prod-de-001.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: germany
+    web-prod-de-002.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: germany
+    web-prod-es-001.example.com:
+      app: apache
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: spain
+    web-prod-es-002.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: centos7
+      vm_support_country: spain
+    web-prod-es-003.example.com:
+      app: apache
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: spain
+    web-prod-fr-001.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: debian11
+      vm_support_country: france
+    web-prod-it-001.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: italy
+    web-prod-it-002.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: ubuntu20
+      vm_support_country: italy
+    web-prod-it-003.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: rhel8
+      vm_support_country: italy
+    web-prod-nl-001.example.com:
+      app: nginx
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: netherlands
+    web-prod-nl-002.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: debian12
+      vm_support_country: netherlands
+    web-prod-nl-003.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: rocky9
+      vm_support_country: netherlands
+    web-prod-nl-004.example.com:
+      app: apache
+      vm_env: prod
+      vm_os: ubuntu22
+      vm_support_country: netherlands
+    web-prod-uk-001.example.com:
+      app: haproxy
+      vm_env: prod
+      vm_os: rhel9
+      vm_support_country: uk
+    web-qa-au-001.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: australia
+    web-qa-au-002.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: australia
+    web-qa-ca-001.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: canada
+    web-qa-de-001.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: germany
+    web-qa-es-001.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: spain
+    web-qa-es-002.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: rhel8
+      vm_support_country: spain
+    web-qa-es-003.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: rocky9
+      vm_support_country: spain
+    web-qa-es-004.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: spain
+    web-qa-es-005.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: ubuntu20
+      vm_support_country: spain
+    web-qa-fr-001.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: france
+    web-qa-fr-002.example.com:
+      app: apache
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: france
+    web-qa-it-001.example.com:
+      app: apache
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: italy
+    web-qa-it-002.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: debian11
+      vm_support_country: italy
+    web-qa-nl-001.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: netherlands
+    web-qa-nl-002.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: netherlands
+    web-qa-pl-001.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: centos7
+      vm_support_country: poland
+    web-qa-pl-002.example.com:
+      app: apache
+      vm_env: qa
+      vm_os: debian12
+      vm_support_country: poland
+    web-qa-pl-003.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: poland
+    web-qa-uk-001.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: uk
+    web-qa-uk-002.example.com:
+      app: nginx
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: uk
+    web-qa-uk-003.example.com:
+      app: apache
+      vm_env: qa
+      vm_os: ubuntu22
+      vm_support_country: uk
+    web-qa-us-001.example.com:
+      app: haproxy
+      vm_env: qa
+      vm_os: rhel9
+      vm_support_country: usa
+    web-staging-au-001.example.com:
+      app: apache
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: australia
+    web-staging-au-002.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: australia
+    web-staging-ca-001.example.com:
+      app: apache
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: canada
+    web-staging-es-001.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: spain
+    web-staging-fr-001.example.com:
+      app: apache
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: france
+    web-staging-fr-002.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: france
+    web-staging-it-001.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: italy
+    web-staging-nl-001.example.com:
+      app: apache
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: netherlands
+    web-staging-nl-002.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: netherlands
+    web-staging-nl-003.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: debian12
+      vm_support_country: netherlands
+    web-staging-pl-001.example.com:
+      app: apache
+      vm_env: staging
+      vm_os: centos7
+      vm_support_country: poland
+    web-staging-pl-002.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: ubuntu20
+      vm_support_country: poland
+    web-staging-uk-001.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: uk
+    web-staging-uk-002.example.com:
+      app: apache
+      vm_env: staging
+      vm_os: rhel8
+      vm_support_country: uk
+    web-staging-uk-003.example.com:
+      app: nginx
+      vm_env: staging
+      vm_os: ubuntu22
+      vm_support_country: uk
+    web-staging-us-001.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: debian11
+      vm_support_country: usa
+    web-staging-us-002.example.com:
+      app: haproxy
+      vm_env: staging
+      vm_os: rhel9
+      vm_support_country: usa
+    web-uat-au-001.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: australia
+    web-uat-au-002.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: australia
+    web-uat-au-003.example.com:
+      app: apache
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: australia
+    web-uat-ca-001.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: canada
+    web-uat-ca-002.example.com:
+      app: apache
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: canada
+    web-uat-ca-003.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: canada
+    web-uat-ca-004.example.com:
+      app: apache
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: canada
+    web-uat-de-001.example.com:
+      app: apache
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: germany
+    web-uat-de-002.example.com:
+      app: apache
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: germany
+    web-uat-de-003.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: germany
+    web-uat-de-004.example.com:
+      app: apache
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: germany
+    web-uat-de-005.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: germany
+    web-uat-es-001.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: spain
+    web-uat-es-002.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: spain
+    web-uat-es-003.example.com:
+      app: apache
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: spain
+    web-uat-es-004.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: spain
+    web-uat-fr-001.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: france
+    web-uat-fr-002.example.com:
+      app: apache
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: france
+    web-uat-it-001.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: italy
+    web-uat-it-002.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: italy
+    web-uat-nl-001.example.com:
+      app: apache
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: netherlands
+    web-uat-nl-002.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: centos7
+      vm_support_country: netherlands
+    web-uat-pl-001.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: poland
+    web-uat-pl-002.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: poland
+    web-uat-pl-003.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: poland
+    web-uat-uk-001.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: debian12
+      vm_support_country: uk
+    web-uat-uk-002.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: debian11
+      vm_support_country: uk
+    web-uat-uk-003.example.com:
+      app: apache
+      vm_env: uat
+      vm_os: rhel9
+      vm_support_country: uk
+    web-uat-uk-004.example.com:
+      app: apache
+      vm_env: uat
+      vm_os: rocky9
+      vm_support_country: uk
+    web-uat-uk-005.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: uk
+    web-uat-us-001.example.com:
+      app: apache
+      vm_env: uat
+      vm_os: ubuntu20
+      vm_support_country: usa
+    web-uat-us-002.example.com:
+      app: nginx
+      vm_env: uat
+      vm_os: rhel8
+      vm_support_country: usa
+    web-uat-us-003.example.com:
+      app: haproxy
+      vm_env: uat
+      vm_os: ubuntu22
+      vm_support_country: usa
