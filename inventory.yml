@@ -1,4 +1,7 @@
 all:
+  children:
+    imed-aouidene:
+    test-dash:
   hosts:
     app-dev-au-001.example.com:
       app: nodejs
